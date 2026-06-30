@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:#000;
+}
+
+/* Fondo */
+
+.fondo{
+    position:fixed;
+    inset:0;
+    background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+        radial-gradient(circle at top,#ffb6d5 0%,#2b0b1e 45%,#000 100%);
+}
+
+/* Contenedor */
+
+.contenedor{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+/* Tarjeta */
+
+.tarjeta{
+
+    width:min(700px,100%);
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:28px;
+
+    padding:50px;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* Título */
+
+h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:64px;
+
+    line-height:1.05;
+
+    margin-bottom:25px;
+
+}
+
+/* Texto */
+
+.mensaje{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+    color:#f6f6f6;
+
+}
+
+/* Caja */
+
+input{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    font-size:18px;
+
+    outline:none;
+
+    margin-bottom:20px;
+
+}
+
+/* Botón */
+
+button{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:#ff4f93;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:scale(1.02);
+
+    background:#ff2d7d;
+
+}
+
+#error{
+
+    margin-top:20px;
+
+    color:#ffd5e5;
+
+    font-weight:600;
+
+}
+
+/* Celular */
+
+@media(max-width:768px){
+
+.tarjeta{
+
+padding:30px 25px;
+
+}
+
+h1{
+
+font-size:42px;
+
+}
+
+.mensaje{
+
+font-size:17px;
+
+}
+
+input,
+button{
+
+height:54px;
+
+font-size:16px;
+
+}
+
+}
