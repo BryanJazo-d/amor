@@ -1,23 +1,15 @@
-function entrar() {
+function abrirRecuerdos(){
 
-    const fecha = document.getElementById("fecha").value.trim();
+const fecha=document.getElementById("fecha").value.trim();
 
-    // IMPORTANTE:
-    // Más adelante cambiaremos esta validación para que no sea visible.
-    if (fecha === "19/09/2024") {
+if(fecha==="19/09/2024" || fecha==="19-09-2024"){
 
-        document.body.style.transition = "opacity .8s";
-        document.body.style.opacity = "0";
+window.location.href="galeria.html";
 
-        setTimeout(() => {
-            window.location.href = "galeria.html";
-        }, 800);
+}else{
 
-    } else {
+alert("Esa fecha no es correcta ❤️");
 
-        document.getElementById("error").textContent =
-        "La fecha no es correcta ❤️";
-
-    }
+}
 
 }

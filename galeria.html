@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nuestros recuerdos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:linear-gradient(135deg,#14070d,#341a2a);
+font-family:Poppins,sans-serif;
+color:white;
+padding:50px 20px;
+
+}
+
+h1{
+
+font-family:"Cormorant Garamond",serif;
+font-size:60px;
+text-align:center;
+margin-bottom:15px;
+
+}
+
+p{
+
+text-align:center;
+opacity:.8;
+margin-bottom:50px;
+
+}
+
+.galeria{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+max-width:1300px;
+
+margin:auto;
+
+}
+
+.galeria img{
+
+width:100%;
+
+height:380px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.4);
+
+}
+
+.galeria img:hover{
+
+transform:scale(1.05);
+
+}
+
+.lightbox{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.9);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Nuestros recuerdos ❤️</h1>
+
+<p>Cada fotografía guarda un pedacito de nuestra historia.</p>
+
+<div class="galeria">
+
+<img src="imagenes/foto1.jpg">
+<img src="imagenes/foto2.jpg">
+<img src="imagenes/foto3.jpg">
+<img src="imagenes/foto4.jpg">
+<img src="imagenes/foto5.jpg">
+<img src="imagenes/foto6.jpg">
+<img src="imagenes/foto7.jpg">
+<img src="imagenes/foto8.jpg">
+
+</div>
+
+<div class="lightbox" id="lightbox">
+
+<img id="grande">
+
+</div>
+
+<script>
+
+const imagenes=document.querySelectorAll(".galeria img");
+
+const light=document.getElementById("lightbox");
+
+const grande=document.getElementById("grande");
+
+imagenes.forEach(img=>{
+
+img.onclick=()=>{
+
+light.style.display="flex";
+
+grande.src=img.src;
+
+}
+
+});
+
+light.onclick=()=>{
+
+light.style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
